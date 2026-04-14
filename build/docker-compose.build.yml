@@ -1,0 +1,11 @@
+services:
+  valhalla-build:
+    image: ghcr.io/valhalla/valhalla:latest
+    container_name: valhalla_build
+    volumes:
+      - ../data:/data
+    command: >
+      bash -c "
+      valhalla_build_config --mjolnir-tile-dir /data/tiles > /data/valhalla.json &&
+      valhalla_build_tiles -c /data/valhalla.json /data/sudeste-latest.osm.pbf
+      "

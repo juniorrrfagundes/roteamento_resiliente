@@ -1,0 +1,10 @@
+services:
+  valhalla:
+    image: ghcr.io/valhalla/valhalla:latest
+    container_name: valhalla_engine_test
+    ports:
+      - "8002:8002"
+    volumes:
+      - ../data:/data
+    command: >
+      valhalla_service /data/valhalla.json 1
