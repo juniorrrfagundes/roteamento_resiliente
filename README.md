@@ -17,6 +17,7 @@
         Para rodar use `docker-compose up`
         
 - data
+
     Deve-se criar essa pasta 'data' na raiz do projeto contendo o arquivo OpenStreetMap (.pbf). Nesse projeto foi utilizado o `sudeste-latest.osm.pbf`
     
     - sudeste-latest.osm.pbf
